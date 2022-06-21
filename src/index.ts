@@ -6,6 +6,12 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT ? process.env.PORT : '8080';
 
+function middleware(req: Request, resp: Response, next: express.NextFunction) {
+  console.log('req = ', req.body);
+  next();
+}
+
+app.use(middleware);
 app.get('/health', (req: Request, res: Response) => {
   res.send('alive');
 });
