@@ -1,0 +1,3 @@
+init:
+	npm i typescript ts-node dotenv cors express
+	npm i -D ts-node-dev @types/node @types/express @types/cors
